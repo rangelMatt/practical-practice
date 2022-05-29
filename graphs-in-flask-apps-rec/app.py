@@ -10,8 +10,8 @@ def index():
 @app.route('/stocks', methods=['GET', 'POST'])
 def stocks():
   url = ('https://data.nasdaq.com/api/v3/datasets/WIKI/AAPL.csv')
-  query = request.form.get('search')
-  return url
+  response = request.get(url)
+  response.json()
 
 
 
